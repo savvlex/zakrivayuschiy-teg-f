@@ -35,11 +35,14 @@
 .header__title {
   margin-block-end: 20px;
   font-size: clamp(3.0625rem, 2.7104rem + 1.5023vw, 4.0625rem);
+  line-height: normal;
+  text-transform: capitalize;
 }
 
 .header__subtitle {
   margin-block-end: 24px;
   font-size: clamp(0.875rem, 0.6769rem + 0.8451vw, 1.4375rem);
+  line-height: normal;
   text-transform: uppercase;
 }
 
@@ -51,6 +54,7 @@
 .theme-menu__list {
   display: flex;
   flex-direction: column;
+  line-height: normal;
   gap: 12px;
 }
 
@@ -97,6 +101,7 @@
   position: absolute;
   bottom: 0;
   left: 6px;
+  opacity: 0.6;
   border-bottom: 1px solid currentColor;
   transition: transform 0.3s ease;
   transform: scale(0);
@@ -125,6 +130,7 @@
 }
 
 .cards__list-title {
+  line-height: normal;
   align-self: start;
   margin-inline: 10px;
   margin-block: 4px;
@@ -150,6 +156,7 @@
   top: 25px;
   right: clamp(13px, var(--breakpoint-simulation), 25px);
   opacity: 0.5;
+  line-height: normal;
   font-family: var(--accent-font);
   font-size: 14px;
   text-shadow:
@@ -160,7 +167,7 @@
   mix-blend-mode: hard-light;
 }
 
-@supports ((text-stroke: 1px #000000) or (-webkit-text-stroke: 1px #000000)) {
+@supports ((text-stroke: 1px var(--main-color)) or (-webkit-text-stroke: 1px var(--main-color))) {
   .cards__list-image-wrapper-label {
     text-shadow: none;
     -webkit-text-stroke: 1px var(--text-stroke-label);
@@ -173,7 +180,7 @@
   gap: 29px;
   padding: 25px 25px 26px 25px;
   font-size: 18px;
-  line-height: 1.16;
+  line-height: 21px;
   font-variation-settings: 'wght' var(--text-weight);
 }
 
@@ -182,6 +189,10 @@
   gap: 4px;
   align-self: end;
   margin: auto 25px 23px auto;
+}
+
+.card__like-button {
+  min-width: 130px;
 }
 
 .card__icon-button {
@@ -282,7 +293,7 @@
 }
 
 .border-box {
-  border: 2px solid currentColor;
+  border: 2px solid var(--main-color);
   background-color: var(--background-color);
 }
 
@@ -304,7 +315,7 @@
   position: relative;
   z-index: 1;
   width: 28px;
-  height: auto;
+  height: 28px;
   color: var(--changing-color);
   mix-blend-mode: difference;
 }
@@ -348,6 +359,10 @@
   box-shadow: 2px 2px 0 currentColor;
   outline: none;
 }
+
+.button-decoration:focus { 
+  outline: none; 
+} 
 
 .button-decoration::before {
   content: '';
@@ -401,7 +416,9 @@
 }
 
 .dialog__icon {
-  inline-size: 39px;
+  height: 39px;
+  width: 39px;
+  color: var(--main-color);
 }
 
 .dialog__title {
@@ -420,7 +437,6 @@
   padding: 10.5px 0;
   text-transform: uppercase;
   inline-size: 100%;
-  cursor: pointer;
 }
 
 @media (width >= 1200px) {
@@ -431,6 +447,7 @@
 
   .floppy-disk {
     width: 21px;
+    height: 21px;
   }
 
   .cards__list-text {
