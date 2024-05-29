@@ -360,9 +360,9 @@
   outline: none;
 }
 
-.button-decoration:focus { 
-  outline: none; 
-} 
+.button-decoration:focus {
+  outline: none;
+}
 
 .button-decoration::before {
   content: '';
