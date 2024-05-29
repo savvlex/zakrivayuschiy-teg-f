@@ -1,1 +1,32 @@
-/* В этом файле будут храниться все значения переменных в исходном состоянии, а так же их изменения в зависимости от ширины устройства */
+:root {
+  --main-color: #000;
+  --background-color: #fff;
+  --text-stroke-label: #fff;
+  --changing-color: #fff;
+  --heart-contur-color: #000;
+  --heart-color: #ff0000;
+  --title-weight: 700;
+  --text-weight: 400;
+
+  --background-image: repeating-linear-gradient(
+      to right,
+      #d3d3d3,
+      #d3d3d3 2px,
+      transparent 2px,
+      transparent 4px
+    ),
+    repeating-linear-gradient(
+      to bottom,
+      #d3d3d3,
+      #d3d3d3 2px,
+      transparent 2px,
+      transparent 4px
+    ),
+    linear-gradient(#e7e7e7 0 0.01%, #1a1a1a);
+
+  --main-font: 'Inter-Variable', 'Arial', sans-serif;
+  --accent-font: 'PressStart2P', fantasy, sans-serif;
+  --breakpoint-desktop: 1200px;
+  --breakpoint-simulation: (100vw - var(--breakpoint-desktop, 1200px));
+  --inline-size: 100%;
+}

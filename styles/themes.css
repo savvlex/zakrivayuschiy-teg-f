@@ -1,6 +1,79 @@
-/* В этом файле вы опишете значения переменных в разных цветовых схемах.
-Придерживайтесь такого именования классов:
-✦ theme-dark — класс тёмной темы
-✦ theme-light — класс светлой темы
-✦ не забудьте описать стили для изменения темы через медизапрос пользовательских предпочтений
-*/
+:root.theme-light {
+  --main-color: #000;
+  --background-color: #fff;
+  --text-stroke-label: #fff;
+  --changing-color: #fff;
+  --heart-contur-color: #000;
+  --title-weight: 700;
+  --text-weight: 400;
+
+  --background-image: repeating-linear-gradient(
+      to right,
+      #d3d3d3,
+      #d3d3d3 2px,
+      transparent 2px,
+      transparent 4px
+    ),
+    repeating-linear-gradient(
+      to bottom,
+      #d3d3d3,
+      #d3d3d3 2px,
+      transparent 2px,
+      transparent 4px
+    ),
+    linear-gradient(#e7e7e7 0 0.01%, #1a1a1a);
+}
+
+:root.theme-dark {
+  --main-color: #00cc14;
+  --background-color: #000;
+  --text-stroke-label: #000;
+  --changing-color: #00cc14;
+  --heart-contur-color: #00cc14;
+  --title-weight: 785;
+  --text-weight: 465;
+
+  --background-image: repeating-linear-gradient(
+      to right,
+      #000,
+      #000 2px,
+      transparent 2px,
+      transparent 4px
+    ),
+    repeating-linear-gradient(
+      to bottom,
+      #000,
+      #000 2px,
+      transparent 2px,
+      transparent 4px
+    ),
+    linear-gradient(#007f0c 0 0.01%, #004306);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --main-color: #00cc14;
+    --background-color: #000;
+    --text-stroke-label: #000;
+    --changing-color: #00cc14;
+    --heart-contur-color: #00cc14;
+    --title-weight: 785;
+    --text-weight: 465;
+
+    --background-image: repeating-linear-gradient(
+        to right,
+        #000,
+        #000 2px,
+        transparent 2px,
+        transparent 4px
+      ),
+      repeating-linear-gradient(
+        to bottom,
+        #000,
+        #000 2px,
+        transparent 2px,
+        transparent 4px
+      ),
+      linear-gradient(#007f0c 0 0.01%, #004306);
+  }
+}
