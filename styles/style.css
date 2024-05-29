@@ -104,9 +104,6 @@
   inline-size: calc(100% - 12px);
 }
 
-.theme-menu__button:focus-visible::before {
-  transform: scale(1);
-}
 
 .cards {
   display: flex;
