@@ -688,8 +688,8 @@
       <button
         class="save-button border-box button-decoration"
         type="button"
-        onclick="window['dialog-id'].showModal()"
-        aria-controls="dialog-id"
+        onclick="window['dialog'].showModal()"
+        aria-controls="dialog"
       >
         <svg viewBox="0 0 39 39" width="39" height="39" class="floppy-disk">
           <use href="./svg/floppy.svg#floppy" />
@@ -697,18 +697,18 @@
         <span class="button__text">Сохранить на память</span>
       </button>
     </main>
-    <dialog id="dialog-id">
-      <svg viewBox="0 0 39 39" width="39" height="39" class="floppy-disk">
-        <use href="./svg/floppy.svg#floppy" />
-      </svg>
-      <h2>Вставьте дискету, чтобы продолжить</h2>
-      <button
-        class="border-box button-decoration"
-        type="button"
-        onclick="window['dialog-id'].close()"
-      >
-        <span class="button__text dialog-button">ок</span>
-      </button>
+    <dialog class="dialog" id="dialog">
+      <div class="dialog__content">
+        <svg class="footer__floppy dialog__icon" viewBox="0 0 40 40">
+          <use href="./svg/floppy.svg#floppy" />
+        </svg>
+        <h4 class="dialog__title">Вставьте дискету, чтобы продолжить</h4>
+        <form method="dialog">
+          <button class="dialog__button button-decoration border-box" type="submit">
+            <span class="button__text">Ok</span>
+          </button>
+        </form>
+      </div>
     </dialog>
     <script src="./scripts/like.js"></script>
   </body>
